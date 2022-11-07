@@ -25,7 +25,7 @@ const config = {
 								'*',
 								'* @package   EDD - Fix Order Numbers',
 								'* @author    Loïc Blascos',
-								'* @copyright 2019-2021 Loïc Blascos',
+								'* @copyright 2022 Loïc Blascos',
 								'*',
 								'*/',
 							].join( '\n' ),
