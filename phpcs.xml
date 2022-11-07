@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<ruleset name="plugin-standards">
+
+	<config name="minimum_supported_wp_version" value="4.7"/>
+	<config name="testVersion" value="5.6-"/>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/assets/*</exclude-pattern>
+	<exclude-pattern>*/src/*</exclude-pattern>
+	<exclude-pattern>*\.(?!php$)</exclude-pattern>
+
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress">
+		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores"/>
+		<exclude name="WordPress.DB.DirectDatabaseQuery.NoCaching"/>
+		<exclude name="WordPress.DB.DirectDatabaseQuery.DirectQuery"/>
+		<exclude name="WordPress.DB.DirectDatabaseQuery.SchemaChange"/>
+		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_meta_key"/>
+		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_meta_value"/>
+		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_meta_query"/>
+		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_tax_query"/>
+		<exclude name="WordPress.DB.PreparedSQLPlaceholders.UnfinishedPrepare"/>
+		<exclude name="WordPress.DB.PreparedSQLPlaceholders.ReplacementsWrongNumber"/>
+		<exclude name="WordPress.PHP.DisallowShortTernary.Found"/>
+	</rule>
+
+	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
+		<exclude-pattern>uninstall.php</exclude-pattern>
+		<exclude-pattern>compatibility.php</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress-Core"/>
+	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress-Extra"/>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="edd-fix-order-numbers"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="Generic.Formatting.MultipleStatementAlignment">
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning"/>
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found"/>
+	</rule>
+
+	<rule ref="PEAR.Files.IncludingFile">
+		<exclude name="PEAR.Files.IncludingFile.UseRequire"/>
+		<exclude name="PEAR.Files.IncludingFile.UseRequireOnce"/>
+	</rule>
+
+	<rule ref="Universal">
+		<exclude name="Universal.Lists.DisallowLongListSyntax.Found"/>
+		<exclude name="Universal.Operators.DisallowShortTernary"/>
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax"/>
+		<exclude name="Universal.Arrays.MixedKeyedUnkeyedArray.Found"/>
+		<exclude name="Universal.Arrays.MixedArrayKeyTypes.StringKey"/>
+		<exclude name="Universal.Arrays.MixedArrayKeyTypes.ImplicitNumericKey"/>
+		<exclude name="Universal.ControlStructures.IfElseDeclaration.NoNewLine"/>
+		<exclude name="Universal.Namespaces.EnforceCurlyBraceSyntax.Forbidden"/>
+		<exclude name="Universal.UseStatements.DisallowUseClass.FoundWithoutAlias"/>
+		<exclude name="Universal.UseStatements.DisallowUseClass.FromSameNamespace"/>
+	</rule>
+
+</ruleset>
