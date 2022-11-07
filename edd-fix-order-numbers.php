@@ -4,7 +4,7 @@
  *
  * @package   Easy Digital Downloads - Fix Order Numbers
  * @author    Loïc Blascos
- * @copyright 2019-2020 Loïc Blascos
+ * @copyright 2022 Loïc Blascos
  *
  * @wordpress-plugin
  * Plugin Name:  Easy Digital Downloads - Fix Order Numbers
