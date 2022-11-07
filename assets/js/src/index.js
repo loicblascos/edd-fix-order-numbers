@@ -1,7 +1,7 @@
 const indicator = document.querySelector( '#edd-fix-order-numbers-progress-indicator' );
 const progress = document.querySelector( '#edd-fix-order-numbers-progress' );
 const button = document.querySelector( '#edd-fix-order-numbers-process' );
-const i18n = window?.edd_fix_order_numbers || {}
+const i18n = window?.edd_fix_order_numbers || {};
 
 let processing = false;
 let controller;
